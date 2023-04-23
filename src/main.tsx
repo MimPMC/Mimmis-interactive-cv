@@ -1,6 +1,7 @@
+import { MantineProvider } from '@mantine/core';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom';
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
 import App from './App';
 import { NotFound } from './components/NotFound';
 import { Overview } from './components/Overview';
@@ -24,6 +25,8 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <App />
+    <MantineProvider withGlobalStyles withNormalizeCSS>
+    <RouterProvider router={router} />
+    </MantineProvider>
   </React.StrictMode>,
 )
