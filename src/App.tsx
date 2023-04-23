@@ -1,11 +1,16 @@
 import { Outlet } from 'react-router-dom';
 import { Footer } from './components/Footer';
-import { Header } from './components/Header';
+import { HeaderMiddle } from './components/Header';
 
 function App() {
+  const links = [
+    { link: '/', label: 'About me' },
+    { link: '/portfolio', label: 'Portfolio' },
+  ];
+
   return (
     <div>
-      <Header></Header>
+      <HeaderMiddle links={links}></HeaderMiddle>
       <main>
         <Outlet></Outlet>
       </main>
