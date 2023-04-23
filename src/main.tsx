@@ -9,6 +9,9 @@ import { ProjectInfo } from './components/ProjectInfo';
 import { PortfolioPage } from './pages/PortfolioPage';
 import { StartPage } from './pages/StartPage';
 
+
+
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
@@ -25,7 +28,14 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <MantineProvider withGlobalStyles withNormalizeCSS>
+    <MantineProvider withGlobalStyles withNormalizeCSS
+          theme={{
+
+            headings: {
+              // properties for all headings
+              fontWeight: 400,
+              fontFamily: 'DynaPuff, cursive'}}}
+          >
       <RouterProvider router={router} />
     </MantineProvider>
   </React.StrictMode>,

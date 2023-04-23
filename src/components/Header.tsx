@@ -2,6 +2,7 @@ import { ActionIcon, Burger, Container, Drawer, Group, Header, ScrollArea, Stack
 import { useDisclosure } from '@mantine/hooks';
 import { IconBrandGithub, IconBrandInstagram, IconBrandItch, IconBrandLinkedin } from '@tabler/icons-react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const useStyles = createStyles((theme) => ({
   inner: {
@@ -95,9 +96,8 @@ export function HeaderMiddle({ links }: HeaderMiddleProps) {
     const { classes, cx } = useStyles();
   
     const items = links.map((link) => (
-        <a
+        <Link to={link.link}
           key={link.label}
-          href={link.link}
           className={cx(classes.link, { [classes.linkActive]: active === link.link })}
           onClick={(event) => {
             event.preventDefault();
@@ -106,7 +106,7 @@ export function HeaderMiddle({ links }: HeaderMiddleProps) {
           }}
         >
           {link.label}
-        </a>
+        </Link>
       ));
   
     return (
@@ -116,7 +116,7 @@ export function HeaderMiddle({ links }: HeaderMiddleProps) {
           <Group className={classes.links} spacing={5}>
             {items}
           </Group>
-          <Title  align='center' color='pink.9' size={26}>Mimmi C</Title>
+          <Title   align='center' color='pink.9' size={26}>Mimmi C</Title>
   
           <Group spacing={1} className={classes.social} position="right" noWrap>
             <ActionIcon size="lg">
