@@ -4,8 +4,8 @@ import { HeaderMiddle } from './components/Header';
 
 function App() {
   const links = [
-    { link: '/', label: 'About me' },
-    { link: '/portfolio', label: 'Portfolio' },
+    { link: '', label: 'About me' },
+    { link: 'portfolio', label: 'Portfolio' },
   ];
 
   return (
