@@ -28,15 +28,16 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
+    <RouterProvider router={router} />
     <MantineProvider withGlobalStyles withNormalizeCSS
           theme={{
 
             headings: {
               // properties for all headings
-              fontWeight: 400,
+              fontWeight: 700,
               fontFamily: 'DynaPuff, cursive'}}}
           >
-      <RouterProvider router={router} />
+      
     </MantineProvider>
   </React.StrictMode>,
 )
