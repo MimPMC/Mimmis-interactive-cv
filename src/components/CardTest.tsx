@@ -1,6 +1,6 @@
 import { Carousel } from '@mantine/carousel';
 import { Button, Card, Group, Image, Text, createStyles, getStylesRef, rem } from '@mantine/core';
-import { IconDeviceGamepad2, IconBrandGithub } from '@tabler/icons-react';
+import { IconBrandGithub, IconDeviceGamepad2 } from '@tabler/icons-react';
 
 
 const useStyles = createStyles((theme) => ({
@@ -58,7 +58,7 @@ export function CarouselCard() {
   ));
 
   return (
-    <Card radius="md" withBorder padding="lg" w={400}>
+    <Card radius="md" withBorder padding="lg" w={380}>
       <Card.Section>
         <Carousel
           withIndicators
@@ -79,8 +79,8 @@ export function CarouselCard() {
         </Text>
       </Group>
 
-      <Text fz="sm" c="dimmed" mt="sm" className={classes.grand2}>
-       The start of a visual novel game, where I have made the art, code and writing. Made with Typescript and OOP.
+      <Text fz="sm" c="dimmed" mt="sm" className={classes.grand2}> 
+       The start of a visual novel game, where I have made the art, code and writing. Made with Typescript and OOP. blajklnds ndkasn ldklasn dlkasnldkn aslkdklnas daslkdlkad lasdldlkdlkas 
       </Text>
 
       <Group position="apart" mt="md">
