@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import { Footer } from './components/Footer';
+import { FooterSocial } from './components/Footer';
 import { HeaderMiddle } from './components/Header';
 
 export const links = [
@@ -17,7 +17,7 @@ function App() {
       <main>
         <Outlet></Outlet>
       </main>
-      <Footer></Footer>
+      <FooterSocial></FooterSocial>
     </div>  
   );
 }
