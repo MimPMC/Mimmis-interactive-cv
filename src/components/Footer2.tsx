@@ -1,16 +1,22 @@
 import { ActionIcon, Container, Group, Image, Text, Title, createStyles, rem } from '@mantine/core';
-import { TbBrandInstagram, TbBrandPinterest, TbBrandTumblr } from "react-icons/tb";
+import {
+  IconBrandGithub,
+  IconBrandInstagram,
+  IconBrandItch,
+  IconBrandLinkedin,
+} from "@tabler/icons-react";
+import { Link } from 'react-router-dom';
 
 const useStyles = createStyles((theme) => ({
   footer: {
     fontFamily:"Gaegu",
     marginTop: rem(120),
-    paddingTop: `calc(${theme.spacing.xl} * 2)`,
-    paddingBottom: `calc(${theme.spacing.xl} * 2)`,
-    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.cyan[6] : theme.colors.cyan[5],
+    paddingTop: `calc(${theme.spacing.lg} * 2)`,
+    paddingBottom: `calc(${theme.spacing.lg} * 2)`,
+    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.pink[6] : theme.colors.pink[5],
     
     borderTop: `${rem(1)} solid ${
-      theme.colorScheme === 'dark' ? theme.colors.cyan[9] : theme.colors.cyan[9]
+      theme.colorScheme === 'dark' ? theme.colors.cyan[9] : theme.colors.pink[9]
     }`,
   },
 
@@ -39,6 +45,7 @@ const useStyles = createStyles((theme) => ({
     display: 'flex',
     justifyContent: 'space-between',
 
+
     [theme.fn.smallerThan('sm')]: {
       flexDirection: 'column',
       alignItems: 'center',
@@ -46,52 +53,63 @@ const useStyles = createStyles((theme) => ({
   },
 
   groups: {
-    paddingTop: "1rem",
-    fontFamily:"Gaegu",
+    paddingTop: ".6rem",
+    fontFamily: "'Grandstander', cursive",
     display: 'flex',
-    flexWrap: 'wrap',
+    justifyContent: "space-between",
+    alignItems:"flex-start",
+
+    width: "65%",
 
     [theme.fn.smallerThan('sm')]: {
       display: 'flex',
+      width: "100%",
       flexDirection: "column",
       alignItems:"center",
-      textAlign: "center"
+      textAlign: "center",
+     
     },
   },
 
   wrapper: {
-    width: rem(160),
+    
   },
 
   link: {
-    fontFamily:"Gaegu",
+    fontFamily: "'Grandstander', cursive",
+    fontWeight: 400,
     display: 'block',
-    color: theme.colorScheme === 'dark' ? theme.colors.cyan[9] : theme.colors.cyan[9],
-    fontSize: theme.fontSizes.lg,
+    width: "20rem",
+    color: theme.colorScheme === 'dark' ? theme.colors.cyan[9] : theme.colors.pink[9],
+    fontSize: theme.fontSizes.md,
     paddingTop: rem(2),
     paddingBottom: rem(2),
-
-    '&:hover': {
-      textDecoration: 'underline',
-    },
   },
 
   title: {
     fontSize: "1.5rem",
     fontWeight: 700,
-    fontFamily:"Gaegu",
+    fontFamily: "'Grandstander', cursive",
     marginBottom: `calc(${theme.spacing.xs} / 2)`,
-    color: theme.colorScheme === 'dark' ? theme.white : theme.colors.cyan[9],
+    color: theme.colorScheme === 'dark' ? theme.white : theme.colors.pink[9],
   },
   bigTitle: {
-    fontSize: "2.8rem",
-    fontWeight: 800,
-    fontFamily:"Gaegu",
-    color: theme.colorScheme === 'dark' ? theme.white : theme.colors.cyan[9],
+    width: "17rem",
+    
+    fontSize: "2.6rem",
+    fontWeight: 600,
+    fontFamily: "'Grandstander', cursive",
+    color: theme.colorScheme === 'dark' ? theme.white : theme.colors.pink[9],
+    [theme.fn.smallerThan('md')]: {
+      fontSize: "2.3rem",
+    },
+    [theme.fn.smallerThan('sm')]: {
+      textAlign: "center"
+    },
   },
 
   afterFooter: {
-    fontFamily:"Gaegu",
+    fontFamily: "'Grandstander', cursive",
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -99,7 +117,7 @@ const useStyles = createStyles((theme) => ({
     paddingTop: theme.spacing.xl,
     paddingBottom: theme.spacing.xl,
     borderTop: `${rem(1)} solid ${
-      theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.cyan[9]
+      theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.pink[9]
     }`,
 
     [theme.fn.smallerThan('sm')]: {
@@ -113,15 +131,32 @@ const useStyles = createStyles((theme) => ({
     },
   },
   reg: {
-    fontFamily:"Gaegu",
+    fontFamily: "'Grandstander', cursive",
     
   },
   image: {
+    marginLeft:"2.5rem",
+    [theme.fn.smallerThan('md')]: {
+      marginTop: theme.spacing.xl,
+      marginLeft:"1rem",
+    },
     
     [theme.fn.smallerThan('sm')]: {
         marginTop: theme.spacing.xl,
+        marginLeft:"0rem",
       },
     
+  },
+  grand: {
+    fontFamily: "'Grandstander', cursive",
+  },
+  socialLink: {
+    color: "white",
+    transition: "200ms ease",
+    "&:hover": {
+        background: theme.colors.pink[9],
+    }
+
   },
 }));
 
@@ -137,12 +172,9 @@ export function Footer2({ data }: FooterLinksProps) {
 
   const groups = data.map((group) => {
     const links = group.links.map((link, index) => (
-      <Text<'a'>
+      <Text
         key={index}
-        className={classes.link}
-        component="a"
-        href={link.link}
-        onClick={(event) => event.preventDefault()}
+        className={classes.link} 
       >
         {link.label}
       </Text>
@@ -160,31 +192,61 @@ export function Footer2({ data }: FooterLinksProps) {
     <footer className={classes.footer}>
       <Container className={classes.inner}>
         <div className={classes.logo}>
-          <Title className={classes.bigTitle} order={1}>ScratchPad</Title>
+          <Title className={classes.bigTitle} order={1}>Mimmi Collin</Title>
           <Text size="xl" color="white" className={classes.description}>
-            Join the Meowment!
+            Frontend developer student!
           </Text>
         </div>
-        <div className={classes.groups}>{groups}
-        <Image className={classes.image} maw={240} mx="auto" radius="md" src="./src/assets/footer.png" alt="Random image" /></div>
+        <div className={classes.groups}>
+          {groups}
+        <Image className={classes.image} maw={250} radius="md" src="./src/assets/laptopcat.png" alt="Random image" />
+        </div>
         
       </Container>
       <Container className={classes.afterFooter}>
-        <Text className={classes.reg} color="cyan.9" size="lg">
-          © 2023 Feline Capital Enterprises.
+        <Text className={classes.reg} color="pink.9" size="lg">
+          © 2023 Mimmi Collin
         </Text>
-
-        <Group spacing={0} className={classes.social} position="right" noWrap>
+        <Group spacing={1} className={classes.social} position="right" noWrap>
+          <Link to="https://www.linkedin.com/in/mimmi-collin/">
+            <ActionIcon size="lg" className={classes.socialLink}>
+              <IconBrandLinkedin
+                size="1.6rem"
+                stroke={1.8}
+                className={classes.socialLink}
+              />
+            </ActionIcon>
+          </Link>
+          <Link to="https://github.com/MimPMC">
+            <ActionIcon size="lg" className={classes.socialLink}>
+              <IconBrandGithub
+                size="1.6rem"
+                stroke={1.8}
+                className={classes.socialLink}
+              />
+            </ActionIcon>
+          </Link>
+          <Link to="https://www.instagram.com/mimsterart/">
           <ActionIcon size="lg">
-            <TbBrandInstagram size="1.5rem" color="white" />
+            <IconBrandInstagram
+              size="1.6rem"
+              stroke={1.8}
+              className={classes.socialLink}
+            />
           </ActionIcon>
+          </Link>
+          <Link to="https://mimpmc.itch.io/">
           <ActionIcon size="lg">
-            <TbBrandTumblr size="1.5rem" color="white" />
+            <IconBrandItch
+              size="1.6rem"
+              stroke={1.8}
+              className={classes.socialLink}
+            />
           </ActionIcon>
-          <ActionIcon size="lg">
-            <TbBrandPinterest size="1.5rem" color="white" />
-          </ActionIcon>
+          </Link>
         </Group>
+
+
       </Container>
     </footer>
   );

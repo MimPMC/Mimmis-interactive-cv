@@ -148,7 +148,7 @@ export function HeaderMiddle({ links }: HeaderMiddleProps) {
           {items}
         </Group>
         <Title  align="center" color="pink.9" size={28} className={classes.grand}>
-          Mimmi C
+          Mimmi Collin
         </Title>
         <Group spacing={1} className={classes.social} position="right" noWrap>
           <Link to="https://www.linkedin.com/in/mimmi-collin/">
@@ -214,7 +214,7 @@ export function HeaderMiddle({ links }: HeaderMiddleProps) {
           onClick={toggleDrawer}
         >
           <Title className={classes.grand} align="center" color="pink.9" mb={8} >
-            Mimmi C
+            Mimmi Collin
           </Title>
           <Stack justify="center" spacing={10} mb={10}>
             {items}

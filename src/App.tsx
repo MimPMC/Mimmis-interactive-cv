@@ -11,13 +11,12 @@ export const links = [
 function App() {
   const footerLinks = [
     {
-      title: "About",
+      title: "Contact",
       links: [
-        { label: "Paw-sibilities", link: "/link1" },
-        { label: "Purr-ivacy Paw-licy", link: "/link2" },
-        { label: "About Our Nine Lives", link: "/link3" },
-        { label: "Veterinary", link: "/link3" },
-        { label: "Terms of Purr-vice", link: "/link3" },
+        { label: "Mimmi Collin", link: "/link1" },
+        { label: "0730506955", link: "/link2" },
+        { label: "mimmi.collin@medieinstitutet.se", link: "/link3" },
+
       ],
     },
     // Add more groups with links as needed
