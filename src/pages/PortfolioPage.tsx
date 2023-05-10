@@ -1,38 +1,38 @@
-import { Container, Title } from "@mantine/core";
+import { Container, Grid, Title } from "@mantine/core";
 import { CarouselCard } from "../components/CardTest";
 import { HeroImageBackground } from "../components/hero";
+import { portfolio } from "../data/data";
 
 export type carouselProps = {
   images: string[];
   title: string;
   text: string;
+  githubLink: string;
+  demoLink: string;
 };
 
-const pictures1 = {
-  images: [
-    "./src/assets/mainmenu.jpg",
-    "./src/assets/hey.jpg",
-    "./src/assets/pick.png",
-    "./src/assets/isac2.jpg",
-  ],
-  title: "Stolen Heart",
-  text: "The start of a visual novel game, where I have made the art, code and writing. Made with Typescript and OOP. blajklnds ndkasn ldklasn dlkasnldkn aslkdklnas daslkdlkad lasdldlkdlkas",
-  githubLink: "https://github.com/MimPMC/Stolen-Hearts",
-  demoLink: "https://game3demo.netlify.app/",
-};
+portfolio
 
 export function PortfolioPage() {
   return (
-    <Container size={"md"}>
+    <Container size={"lg"}>
       <HeroImageBackground></HeroImageBackground>
       <Title align="center" pb={10}></Title>
-      <CarouselCard
-        images={pictures1.images}
-        title={pictures1.title}
-        text={pictures1.text}
-        githubLink={pictures1.githubLink}
-        demoLink={pictures1.demoLink}
-      ></CarouselCard>
+      <Grid p={0}>
+      {portfolio.map((item, index) => (
+        <Grid.Col xs={12} sm={6} md={6} lg={6} key={index}>
+          <CarouselCard
+            images={item.images}
+            title={item.title}
+            text={item.text}
+            githubLink={item.githubLink}
+            demoLink={item.demoLink}
+          />
+        </Grid.Col>
+      ))}
+    </Grid>
+
+  
     </Container>
   );
 }

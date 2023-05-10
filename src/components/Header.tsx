@@ -135,7 +135,7 @@ export function HeaderMiddle({ links }: HeaderMiddleProps) {
 
   return (
     <Header height={56} mb={0} className={classes.lightPink}>
-      <Container className={classes.inner}>
+      <Container className={classes.inner} size={"lg"}>
         <Burger
           mr={10}
           color="#d6336c"
@@ -147,8 +147,8 @@ export function HeaderMiddle({ links }: HeaderMiddleProps) {
         <Group className={classes.links} spacing={5}>
           {items}
         </Group>
-        <Title  align="center" color="pink.9" size={28} className={classes.grand}>
-          Mimmi Collin
+        <Title  align="center" color="pink.9" size={26} className={classes.grand}>
+          Mimmi C
         </Title>
         <Group spacing={1} className={classes.social} position="right" noWrap>
           <Link to="https://www.linkedin.com/in/mimmi-collin/">

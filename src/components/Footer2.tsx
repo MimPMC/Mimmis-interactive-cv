@@ -137,7 +137,6 @@ const useStyles = createStyles((theme) => ({
   image: {
     marginLeft:"2.5rem",
     [theme.fn.smallerThan('md')]: {
-      marginTop: theme.spacing.xl,
       marginLeft:"1rem",
     },
     
@@ -190,7 +189,7 @@ export function Footer2({ data }: FooterLinksProps) {
 
   return (
     <footer className={classes.footer}>
-      <Container className={classes.inner}>
+      <Container className={classes.inner} size={"lg"}>
         <div className={classes.logo}>
           <Title className={classes.bigTitle} order={1}>Mimmi Collin</Title>
           <Text size="xl" color="white" className={classes.description}>
