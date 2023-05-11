@@ -16,7 +16,7 @@ portfolio
 
 export function PortfolioPage() {
   return (
-    <Container size={"lg"}>
+    <Container size={"lg"} mt={"3.5rem"}>
       <HeroImageBackground></HeroImageBackground>
       <Title align="center" pb={10}></Title>
       <Grid p={0}>
