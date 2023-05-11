@@ -127,7 +127,7 @@ export function CarouselCard(props: carouselProps
       <Group position="apart" mt="md" >
         <Link to={props.githubLink}>
           <Button
-            color="pink"
+            color="cyan"
             radius="md"
             variant="outline"
             className={classes.buttons}

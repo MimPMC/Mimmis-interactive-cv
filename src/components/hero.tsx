@@ -28,7 +28,7 @@ const useStyles = createStyles((theme) => ({
     letterSpacing: rem(-1),
     paddingLeft: theme.spacing.md,
     paddingRight: theme.spacing.md,
-    color: theme.colors.pink[9],
+    color: theme.colors.cyan[9],
     marginBottom: theme.spacing.xs,
     textAlign: 'center',
     fontFamily: "'Grandstander', cursive",
@@ -40,7 +40,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   highlight: {
-    color: theme.colors.pink[3],
+    color: theme.colors.cyan[3],
     fontFamily: "'Grandstander', cursive"
   },
 

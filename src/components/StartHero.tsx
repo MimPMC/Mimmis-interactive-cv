@@ -1,4 +1,5 @@
 import { Button, Container, Text, Title, createStyles, rem } from '@mantine/core';
+import { Link } from 'react-router-dom';
 
 const useStyles = createStyles((theme) => ({
   root: {
@@ -6,11 +7,11 @@ const useStyles = createStyles((theme) => ({
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundImage:
-      'linear-gradient(250deg, rgba(130, 201, 30, 0) 30%, #aa1a45 85%), url("./src/assets/pinkmountains2.png")',
+      'linear-gradient(250deg, rgba(130, 201, 30, 0) 30%, #d1265f 85%), url("./src/assets/pinkmountains2.png")',
       paddingTop: `calc(${theme.spacing.xl} * 3)`,
       paddingBottom: `calc(${theme.spacing.xl} * 3)`,
     [theme.fn.smallerThan('sm')]: {
-        paddingTop: `calc(${theme.spacing.sm} * 2)`,
+        paddingTop: `calc(${theme.spacing.sm} * 3)`,
         paddingBottom: `calc(${theme.spacing.sm} * 2)`,
       },
   },
@@ -34,6 +35,7 @@ const useStyles = createStyles((theme) => ({
     paddingTop: `calc(${theme.spacing.lg} * 3)`,
     paddingBottom: `calc(${theme.spacing.lg} * 1)`,
     marginRight: `calc(${theme.spacing.xl} * 3)`,
+    
 
     [theme.fn.smallerThan('md')]: {
       marginRight: 0,
@@ -42,10 +44,10 @@ const useStyles = createStyles((theme) => ({
 
   title: {
     color: theme.white,
-    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+    fontFamily: "'Grandstander', cursive",
     fontWeight: 900,
     lineHeight: 1.05,
-    maxWidth: rem(600),
+    maxWidth: rem(650),
     fontSize: rem(48),
 
     [theme.fn.smallerThan('md')]: {
@@ -59,7 +61,8 @@ const useStyles = createStyles((theme) => ({
     color: theme.white,
     opacity: 0.85,
     maxWidth: rem(500),
-    fontWeight: 400,
+    fontWeight: 600,
+    
     
     [theme.fn.smallerThan('md')]: {
       maxWidth: '100%',
@@ -91,31 +94,32 @@ export function HeroImageRight() {
         <div className={classes.inner}>
           <div className={classes.content}>
             <Title className={classes.title}>
-              Crafting{' '}
+              Creating{' '}
               <Text
                 component="span"
                 inherit
                 variant="gradient"
-                gradient={{ from: 'cyan', to: 'yellow' }}
+                gradient={{ from: 'cyan.3', to: 'pink.1' }}
               >
-                Beautiful
+                Beautiful websites
               </Text>{' '}
-              websites with passion!
+               and games with passion!
             </Title>
             <Text className={classes.description} mt={30}>
             I am a creative front-end developer student with a background in 2D graphics and art. I am is eager to find my first internship where I can learn and grow while working on exciting projects. 
             I have a passion for coding, designing websites and graphics. Besides my interests in technology, I also enjoy painting and cooking.
             </Text>
-
+            <Link to= "/portfolio">
             <Button
-            color='cyan'
+              color='cyan'
               size="lg"
               className={classes.control}
               radius={"md"}
-              mt={40}
+              mt={35}
             >
               Check out my Projects!
             </Button>
+            </Link>
           </div>
         </div>
       </Container>

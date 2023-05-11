@@ -18,7 +18,6 @@ export function PortfolioPage() {
   return (
     <Container size={"lg"} mt={"3.5rem"}>
       <HeroImageBackground></HeroImageBackground>
-      <Title align="center" pb={10}></Title>
       <Grid p={0}>
       {portfolio.map((item, index) => (
         <Grid.Col xs={12} sm={6} md={6} lg={6} key={index}>

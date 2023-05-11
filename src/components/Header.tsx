@@ -19,7 +19,7 @@ import {
   IconBrandLinkedin,
 } from "@tabler/icons-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export const useStyles = createStyles((theme) => ({
   inner: {
@@ -117,13 +117,17 @@ export function HeaderMiddle({ links }: HeaderMiddleProps) {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
     useDisclosure(false);
   const { classes, cx } = useStyles();
+  const location = useLocation(); // get current location path
+  const { pathname } = location;
+
+
 
   const items = links.map((link) => (
     <Link
       to={link.link}
       key={link.label}
       className={cx(classes.link, classes.grand, {
-        [classes.linkActive]: active === link.link,
+        [classes.linkActive]: pathname === link.link,
       })}
       onClick={() => {
         setActive(link.link);
