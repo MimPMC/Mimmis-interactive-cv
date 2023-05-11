@@ -62,6 +62,7 @@ export const useStyles = createStyles((theme) => ({
   },
   lightPink: {
     background: theme.colors.pink[2],
+    position: "fixed"
   },
 
   link: {
