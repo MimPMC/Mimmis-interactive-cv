@@ -92,8 +92,8 @@ export const useStyles = createStyles((theme) => ({
 
   linkActive: {
     "&, &:hover": {
-      backgroundColor: theme.colors.pink[0],
-      color: theme.colors.pink[8],
+      backgroundColor: theme.colors.cyan[3],
+      color: "white",
     },
   },
   hiddenDesktop: {
@@ -148,7 +148,7 @@ export function HeaderMiddle({ links }: HeaderMiddleProps) {
         <Group className={classes.links} spacing={5}>
           {items}
         </Group>
-        <Title  align="center" color="pink.9" size={26} className={classes.grand}>
+        <Title  align="center" color="pink.9" size={26} className={classes.grand} >
           Mimmi C
         </Title>
         <Group spacing={1} className={classes.social} position="right" noWrap>

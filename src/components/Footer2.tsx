@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 const useStyles = createStyles((theme) => ({
   footer: {
     fontFamily:"Gaegu",
-    marginTop: rem(120),
+    marginTop: rem(80),
     paddingTop: `calc(${theme.spacing.lg} * 2)`,
     paddingBottom: `calc(${theme.spacing.lg} * 2)`,
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.pink[6] : theme.colors.pink[5],
