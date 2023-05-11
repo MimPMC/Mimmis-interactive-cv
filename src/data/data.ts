@@ -68,11 +68,12 @@ export const portfolio: carouselProps[] = [
     {
       images: [
         "./src/assets/carousel/scratchpadp.png",
+        "./src/assets/carousel/scratchpad_2.png",
       ],
       title: "Scratchpad",
-      text: "A social media app for cats where you can register an account, log in post, edit and delete posts. Its coming to the demo soon!",
+      text: "A social media app for cats where you can register an account, log in, post, edit and delete posts. The accounts and posts are saved in a Mongodb database. Its coming to the demo soon!",
       githubLink: "https://github.com/MimPMC/",
-      demoLink: "https://mimpmc.itch.io/pro-esport-dating-adventure-chapter-1-beta",
+      demoLink: "/portfolio",
       demoText: "Coming soon!"
   
     },
