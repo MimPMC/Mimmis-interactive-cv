@@ -146,7 +146,7 @@ export function CarouselCard(props: carouselProps
             className={classes.buttons}
           >
             <Text pr={5} className={classes.grand2}>
-              Go to Demo
+            {props.demoText ? props.demoText : "Go to Demo"}
             </Text>
             <IconDeviceGamepad2></IconDeviceGamepad2>
           </Button>

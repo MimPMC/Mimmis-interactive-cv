@@ -9,6 +9,7 @@ export type carouselProps = {
   text: string;
   githubLink: string;
   demoLink: string;
+  demoText?: string
 };
 
 portfolio
@@ -27,12 +28,11 @@ export function PortfolioPage() {
             text={item.text}
             githubLink={item.githubLink}
             demoLink={item.demoLink}
+            demoText={item.demoText}
           />
         </Grid.Col>
       ))}
     </Grid>
-
-  
     </Container>
   );
 }
