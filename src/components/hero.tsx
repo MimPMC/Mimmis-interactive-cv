@@ -10,6 +10,7 @@ const useStyles = createStyles((theme) => ({
     //  'url(./src/assets/bedroom_pink.png)',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
+    marginTop:"3.5rem",
 
     [theme.fn.smallerThan('xs')]: {
       paddingTop: rem(25),

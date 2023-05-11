@@ -1,5 +1,7 @@
 import { Box, Container, Flex } from "@mantine/core";
+import { ContactImage } from "../components/ContactImage";
 import { HeroImageRight } from "../components/StartHero";
+import { StatsRing } from "../components/stats";
 
 
 const data = [
@@ -11,18 +13,22 @@ const data = [
       icon: "up",
   },
 ];
+
+
   
 
 export function StartPage() {
-
-    return (
-      <Box>
-        <HeroImageRight></HeroImageRight>
-        <Container size={"lg"} mt={"3.5rem"}>
-        <Flex w={"100%"} h={700} bg={"red"}>
+  return (
+    <Box bg={"cyan.3"}>
+      <HeroImageRight></HeroImageRight>
+      <Container size={"lg"}>
+        <ContactImage></ContactImage>
+        <Flex w={"100%"} h={300} bg={"hotpink"}>
+          Skills:
         </Flex>
-    </Container>
-        
-      </Box>
-    )
+      </Container>
+    </Box>
+  );
 }
+
+<StatsRing data={data} ></StatsRing>
