@@ -1,5 +1,6 @@
-import { Center, Group, Paper, RingProgress, SimpleGrid, Text } from '@mantine/core';
+import { Box, Center, Flex, Group, RingProgress, Text } from '@mantine/core';
 import { IconArrowDownRight, IconArrowUpRight } from '@tabler/icons-react';
+import { Icon } from 'tabler-icons-react';
 
 interface StatsRingProps {
   data: {
@@ -7,6 +8,7 @@ interface StatsRingProps {
     stats: string;
     progress: number;
     color: string;
+    Icon: Icon
   }[];
 }
 
@@ -15,38 +17,39 @@ const icons = {
   down: IconArrowDownRight,
 };
 
-export function StatsRing({ data }: StatsRingProps) {
+export function StatsRings({ data }: StatsRingProps) {
   const stats = data.map((stat) => {
     return (
-      <Paper withBorder radius="md" p="xs" key={stat.label}>
-        <Group>
+      <Box  p="xs" key={stat.label} w={190}>
+        <Group >
           <RingProgress
-            size={80}
+            size={75}
             roundCaps
-            thickness={8}
+            thickness={7}
             sections={[{ value: stat.progress, color: stat.color }]}
             label={
               <Center>
+                {<stat.Icon size={30} color={stat.color}/>}
               </Center>
             }
           />
-
           <div>
-            <Text color="dimmed" size="xs" transform="uppercase" weight={700}>
+            <Text color="black" size="xs" transform="uppercase" weight={700}>
               {stat.label}
             </Text>
-            <Text weight={600} size="xl">
+            <Text weight={600} size="lg">
               {stat.stats}
+              
             </Text>
           </div>
         </Group>
-      </Paper>
+      </Box>
     );
   });
 
   return (
-    <SimpleGrid cols={3} breakpoints={[{ maxWidth: 'sm', cols: 1 }]}>
+    <Flex w={"100%"} wrap={"wrap"} justify={"center"} align={"center"}>
       {stats}
-    </SimpleGrid>
+    </Flex>
   );
 }

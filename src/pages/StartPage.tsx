@@ -1,34 +1,24 @@
-import { Box, Container, Flex } from "@mantine/core";
+import { Box, Col, Container, Grid } from "@mantine/core";
 import { ContactImage } from "../components/ContactImage";
 import { HeroImageRight } from "../components/StartHero";
-import { StatsRing } from "../components/stats";
+import { Skills } from "../components/skills";
+import { ProgressCard, TechKnowledge, TechQuote } from "../components/test1";
 
 
-const data = [
-    {
-      label: 'html',
-      stats: '100',
-      progress: 70,
-      color: 'pink',
-      icon: "up",
-  },
-];
+
 
 
   
 
 export function StartPage() {
   return (
-    <Box bg={"cyan.3"}>
+    <Box bg={"cyan.3"} pb={90}>
       <HeroImageRight></HeroImageRight>
       <Container size={"lg"}>
         <ContactImage></ContactImage>
-        <Flex w={"100%"} h={300} bg={"hotpink"}>
-          Skills:
-        </Flex>
+        <Skills></Skills>
       </Container>
     </Box>
   );
 }
 
-<StatsRing data={data} ></StatsRing>
