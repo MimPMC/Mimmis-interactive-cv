@@ -1,11 +1,11 @@
 import { Card, Center, Col, Grid, Progress, Text, useMantineTheme } from '@mantine/core';
-import { IconBrandAlpineJs } from '@tabler/icons-react';
+import { IconBrandAlpineJs, IconBrandReactNative } from '@tabler/icons-react';
 import { AiFillGithub } from 'react-icons/ai';
 import { CgFigma } from 'react-icons/cg';
 import { FaBootstrap, FaGit, FaReact } from 'react-icons/fa';
 import { ImHtmlFive } from 'react-icons/im';
 import { IoLogoCss3 } from 'react-icons/io';
-import { SiAdobepremierepro, SiChakraui, SiJavascript, SiMongodb, SiSocketdotio, SiStyledcomponents, SiTypescript } from 'react-icons/si';
+import { SiChakraui, SiJavascript, SiMongodb, SiSocketdotio, SiStyledcomponents, SiTypescript } from 'react-icons/si';
 import { TbBrandCypress, TbBrandMantine } from 'react-icons/tb';
 import { useStyles } from './Header';
 
@@ -47,18 +47,19 @@ export function TechKnowledge() {
   const {classes} = useStyles()
 
   const icons = [
-    { Icon: AiFillGithub, title: "Github" },
-    { Icon: FaGit, title: "Git" },
-    { Icon: IconBrandAlpineJs, title: "Alpine" },
-    { Icon: SiMongodb, title: "MongoDB" },
-    { Icon: CgFigma, title: "Figma" },
-    { Icon: SiChakraui, title: "Chakra UI" },
-    { Icon: TbBrandMantine, title: "Mantine" },
-    { Icon: FaBootstrap, title: "Bootstrap" },
-    { Icon: SiSocketdotio, title: "Socket.io" },
-    { Icon: TbBrandCypress, title: "Cypress"},
-    { Icon: SiStyledcomponents, title: "Styled Components" },
-    { Icon: SiAdobepremierepro, title: "Adobe Photoshop" },
+    { Icon: AiFillGithub, title: "Github", color: "#6e5494" },
+    { Icon: FaGit, title: "Git" ,color: "#c9510c"},
+    { Icon: IconBrandReactNative, title: "React-native",color: "#00d8ff"  },
+    { Icon: IconBrandAlpineJs, title: "Alpine" ,color: "#23246b"  },
+    { Icon: SiMongodb, title: "MongoDB" ,color: "#589636" }, 
+    { Icon: CgFigma, title: "Figma" ,color: "#222222" },
+    { Icon: SiChakraui, title: "Chakra UI", color: "#38B2AC" },
+    { Icon: TbBrandMantine, title: "Mantine", color: "#1c7ed6" },
+    { Icon: FaBootstrap, title: "Bootstrap", color: "#7c0dd6" },
+    { Icon: SiSocketdotio, title: "Socket.io", color: "black" },
+    { Icon: TbBrandCypress, title: "Cypress", color: "#1cd698"},
+    { Icon: SiStyledcomponents, title: "Styled Components", color: "#ECC94B" },
+    
 
   ];
   return(
@@ -69,10 +70,10 @@ export function TechKnowledge() {
       })}
     >
       <Grid gutter="xl">
-  {icons.map(({ Icon, title }) => (
+  {icons.map(({ Icon, title, color }) => (
     <Col span={3} md={2}  sm={2} xs={4} key={title}>
       <div style={{ textAlign: 'center' }}>
-        <Icon size={40} />
+        <Icon size={40} color={color} />
         <Text align="center" className={classes.grand}>{title}</Text>
       </div>
     </Col>
