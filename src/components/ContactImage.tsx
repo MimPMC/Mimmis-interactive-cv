@@ -62,7 +62,7 @@ export function ContactImage() {
     >
       <Image
         radius="md"
-        src="./src/assets/laptopcat.png"
+        src="./src/assets/picture.png"
         alt="cat"
         className={classes.inner}
       />
