@@ -5,14 +5,9 @@ import { Skills } from "../components/skills";
 import { ProgressCard, TechKnowledge, TechQuote } from "../components/test1";
 
 
-
-
-
-  
-
 export function StartPage() {
   return (
-    <Box bg={"cyan.3"} pb={90}>
+    <Box bg={"pink.1"} pb={90}>
       <HeroImageRight></HeroImageRight>
       <Container size={"lg"}>
         <ContactImage></ContactImage>
