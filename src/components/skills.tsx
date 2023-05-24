@@ -133,63 +133,9 @@ export function Skills() {
           </Tabs.Panel>
 
           <Tabs.Panel value="messages" pt="xs">
-            <Grid gutter="lg" p={30}>
-              <Col>
-                <Box maw={"100%"} mx="auto">
-                  <Timeline color="pink" active={3} reverseActive bulletSize={35} lineWidth={5}>
-                    <Timeline.Item title="Default bullet" >
-                      <Text color="dimmed" size="sm">
-                        Default bullet without anything
-                      </Text>
-                    </Timeline.Item>
-                    <Timeline.Item
-                      title="Avatar"
-                      bulletSize={35}
-                      bullet={
-                        <Avatar
-                          size={22}
-                          radius="xl"
-                          src="https://avatars0.githubusercontent.com/u/10353856?s=460&u=88394dfd67727327c1f7670a1764dc38a8a24831&v=4"
-                        />
-                      }
-                    >
-                      <Text color="dimmed" size="sm">
-                        Timeline bullet as avatar image
-                      </Text>
-                    </Timeline.Item>
-                    <Timeline.Item
-                      title="Icon"
-                      bulletSize={35}
-                      bullet={<IconSun size="0.8rem" />}
-                    >
-                      <Text color="dimmed" size="sm">
-                        Timeline bullet as icon
-                      </Text>
-                    </Timeline.Item>
-                    <Timeline.Item
-                      title="ThemeIcon"
-                      bulletSize={24}
-                      bullet={
-                        <ThemeIcon
-                          size={35}
-                          variant="gradient"
-                          gradient={{ from: "lime", to: "cyan" }}
-                          radius="xl"
-                        >
-                          <IconVideo size="0.8rem" />
-                        </ThemeIcon>
-                      }
-                    >
-                      <Text color="dimmed" size="sm">
-                        Timeline bullet as ThemeIcon component
-                      </Text>
-                    </Timeline.Item>
-                  </Timeline>
-                </Box>
-              </Col>
-            </Grid>
+            <Box bg={"blue"} h={"10rem"} w={"100%"}></Box>
+           
           </Tabs.Panel>
-
           <Tabs.Panel value="settings" pt="xs">
             Settings tab content
           </Tabs.Panel>
