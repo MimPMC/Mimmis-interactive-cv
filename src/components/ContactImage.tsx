@@ -104,10 +104,6 @@ export function ContactImage() {
               Contact me:
             </Title>
             <Group>
-              <IconMapPin size="1.7rem" stroke={1.8} />
-              <Text className={classes.grand1}>073-0506955</Text>
-            </Group>
-            <Group>
               <IconMail size="1.7rem" stroke={1.8} />
               <Text className={classes.grand1}>
                 mimmi.collin@medieinstitutet.se
@@ -116,6 +112,10 @@ export function ContactImage() {
             <Group>
               <IconPhone size="1.7rem" stroke={1.8} />
               <Text className={classes.grand1}>073-0506955</Text>
+            </Group>
+            <Group>
+              <IconMapPin size="1.7rem" stroke={1.8} />
+              <Text className={classes.grand1}>Munkedal</Text>
             </Group>
           </Stack>
         </Flex>
