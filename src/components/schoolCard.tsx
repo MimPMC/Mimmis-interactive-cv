@@ -8,16 +8,16 @@ export const MOCKDATA = [
     "I have learned about HTML & CSS, Ux and Usability, JavaScript basics, JavaScript advanced, and Dynamic Web Development and creating backend servers and API's.",
   },
   {
-    image:  "./src/assets/2.png",
-    title: 'Dataspelsutveckling  2015-2018',
+    image:  "./src/assets/3.png",
+    title: 'Dataspelsutveckling 2D Grafik 2015-2018',
     description:
-      'People say it can run at the same speed as lightning striking, Its icy body is so cold, it will not melt even if it is immersed in magma',
+      "Bachelor's degree in Media, Aesthetics, and Storytelling. I learned how to create and implement 2D graphics and worked on several larger projects with other game development students"
   },
   {
-    image:  "./src/assets/carousel/gl1.png",
-    title: 'No third parties',
+    image:  "./src/assets/4.png",
+    title: 'Karlstads Universitet Serieteckning 2014',
     description:
-      'They’re popular, but they’re rare. Trainers who show them off recklessly may be targeted by thieves',
+      'Arts and comics class where I got to create multiple art projects with fun and interesed people.',
   },
 ];
 
@@ -30,7 +30,7 @@ interface FeatureProps {
 export function Feature({ image, title, description }: FeatureProps) {
   return (
     <div>
-      <Image src={image}></Image>
+      <Image h={150} src={image}></Image>
       <Text mt="sm" mb={7}>
         {title}
       </Text>
