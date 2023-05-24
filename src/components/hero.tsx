@@ -106,7 +106,7 @@ export function HeroImageBackground() {
 
   return (
     <div className={classes.wrapper}>
-      <Overlay color="#ffffff" opacity={0.9} zIndex={1} />
+      
 
       <div className={classes.inner}>
         <Title className={classes.title}>

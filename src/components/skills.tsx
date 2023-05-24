@@ -10,6 +10,8 @@ import { DiNodejs } from "react-icons/di";
 import { FeaturesGrid } from "./schoolCard";
 import { StatsRings } from "./stats";
 import { TechKnowledge, TechQuote } from "./test1";
+import { FeaturesCards } from "./work";
+
 
 
 const data = [
@@ -114,7 +116,7 @@ export function Skills() {
               className={activeTab === "settings" ? classes.activeTab : ""}
             >
               <Title order={3} className={classes.grand} mb={2}>
-                Education
+                Experience
               </Title>
             </Tabs.Tab>
           </Tabs.List>
@@ -137,7 +139,8 @@ export function Skills() {
           
           </Tabs.Panel>
           <Tabs.Panel value="settings" pt="xs">
-            Settings tab content
+   
+          <FeaturesCards></FeaturesCards>
           </Tabs.Panel>
         </Tabs>
       </Flex>

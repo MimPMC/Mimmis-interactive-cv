@@ -6,13 +6,15 @@ const useStyles = createStyles((theme) => ({
     backgroundColor: '#691329',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
+    height: "100vh",
     backgroundImage:
+    
       'linear-gradient(250deg, rgba(130, 201, 30, 0) 30%, #d1265f 85%), url("./src/assets/pinkmountains2.png")',
-      paddingTop: `calc(${theme.spacing.xl} * 3)`,
-      paddingBottom: `calc(${theme.spacing.xl} * 3)`,
+      paddingTop: `50vh`,
+      paddingBottom: `30vh`,
     [theme.fn.smallerThan('sm')]: {
-        paddingTop: `calc(${theme.spacing.sm} * 3)`,
-        paddingBottom: `calc(${theme.spacing.sm} * 2)`,
+        paddingTop: `50vh`,
+        paddingBottom: `40vh`,
       },
   },
 
@@ -61,7 +63,8 @@ const useStyles = createStyles((theme) => ({
     color: theme.white,
     opacity: 0.85,
     maxWidth: rem(500),
-    fontWeight: 600,
+    fontWeight: 700,
+
     
     
     [theme.fn.smallerThan('md')]: {
@@ -106,8 +109,7 @@ export function HeroImageRight() {
                and games with passion!
             </Title>
             <Text className={classes.description} mt={30}>
-            I am a creative front-end developer student with a background in 2D graphics and art. I am is eager to find my first internship where I can learn and grow while working on exciting projects. 
-            I have a passion for coding, designing websites and graphics. Besides my interests in technology, I also enjoy painting and cooking.
+            Welcome! I'm Mimmi Collin – a passionate artist, programmer, writer, and creator. I specialize in crafting stunning websites and captivating games. Join me on this creative adventure!
             </Text>
             <Link to= "/portfolio">
             <Button

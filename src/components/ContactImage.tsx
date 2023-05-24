@@ -84,11 +84,12 @@ export function ContactImage() {
             {" "}
             Frontend developer student
           </Text>
-          <Text my={20}>
+          <Text my={10}>
             {" "}
-            text text text texttext texttext texttext texttext texttext texttext texttext 
-            texttext texttext texttext texttext texttext texttext text texttext texttext texttext texttext texttext texttext text
-            texttext texttext texttext texttext texttext text
+            I am a creative front-end developer student with a background in 2D graphics and art. 
+            I am is eager to find my first internship where I can learn and grow while working on
+             exciting projects. I have a passion for coding, designing websites and graphics. Besides
+              my interests in technology, I also enjoy painting and cooking!
           </Text>
         </Flex>
         <Flex
@@ -96,6 +97,7 @@ export function ContactImage() {
           w={"100%"}
           direction={"column"}
           className={classes.infoBox}
+          mt={10}
         >
           <Stack spacing={10}>
             <Title order={3} className={classes.grand2}>
