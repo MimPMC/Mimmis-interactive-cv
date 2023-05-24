@@ -1,16 +1,16 @@
-import { Avatar, Box, Col, Flex, Grid, Tabs, Text, ThemeIcon, Timeline, Title, createStyles } from "@mantine/core";
+import { Col, Flex, Grid, Tabs, Title, createStyles } from "@mantine/core";
 import {
-    IconBrandCss3,
-    IconBrandHtml5,
-    IconBrandJavascript,
-    IconBrandReact,
+  IconBrandCss3,
+  IconBrandHtml5,
+  IconBrandJavascript,
+  IconBrandReact,
 } from "@tabler/icons-react";
 import { useState } from "react";
 import { DiNodejs } from "react-icons/di";
+import { FeaturesGrid } from "./schoolCard";
 import { StatsRings } from "./stats";
 import { TechKnowledge, TechQuote } from "./test1";
 
-import { IconSun, IconVideo } from '@tabler/icons-react';
 
 const data = [
   {
@@ -131,10 +131,10 @@ export function Skills() {
               </Col>
             </Grid>
           </Tabs.Panel>
-
+         
           <Tabs.Panel value="messages" pt="xs">
-            <Box bg={"blue"} h={"10rem"} w={"100%"}></Box>
-           
+          <FeaturesGrid title={"hello"} description={"hello"} ></FeaturesGrid>
+          
           </Tabs.Panel>
           <Tabs.Panel value="settings" pt="xs">
             Settings tab content
