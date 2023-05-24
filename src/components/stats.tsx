@@ -1,6 +1,6 @@
-import { Box, Center, Flex, Group, RingProgress, Text } from '@mantine/core';
-import { IconArrowDownRight, IconArrowUpRight } from '@tabler/icons-react';
+import { Box, Center, Flex, Group, RingProgress, Text, createStyles } from '@mantine/core';
 import { Icon } from 'tabler-icons-react';
+
 
 interface StatsRingProps {
   data: {
@@ -12,15 +12,20 @@ interface StatsRingProps {
   }[];
 }
 
-const icons = {
-  up: IconArrowUpRight,
-  down: IconArrowDownRight,
-};
+
+const useStyles = createStyles((theme) => ({
+  hey: {
+    [theme.fn.largerThan("sm")]: {
+      width: 300,
+      paddingLeft:90
+    }, 
+  },}))
 
 export function StatsRings({ data }: StatsRingProps) {
+  const {classes }= useStyles()
   const stats = data.map((stat) => {
     return (
-      <Box  p="xs" key={stat.label} w={190}>
+      <Box  p="xs" key={stat.label} w={190} className={classes.hey}>
         <Group >
           <RingProgress
             size={75}

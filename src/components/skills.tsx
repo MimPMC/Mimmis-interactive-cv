@@ -1,14 +1,16 @@
-import { Col, Flex, Grid, Title, createStyles } from "@mantine/core";
+import { Avatar, Box, Col, Flex, Grid, Tabs, Text, ThemeIcon, Timeline, Title, createStyles } from "@mantine/core";
 import {
-  IconBrandCss3,
-  IconBrandHtml5,
-  IconBrandJavascript,
-  IconBrandReact,
+    IconBrandCss3,
+    IconBrandHtml5,
+    IconBrandJavascript,
+    IconBrandReact,
 } from "@tabler/icons-react";
+import { useState } from "react";
 import { DiNodejs } from "react-icons/di";
-import { SiExpress } from "react-icons/si";
 import { StatsRings } from "./stats";
-import { ProgressCard, TechQuote, TechKnowledge } from "./test1";
+import { TechKnowledge, TechQuote } from "./test1";
+
+import { IconSun, IconVideo } from '@tabler/icons-react';
 
 const data = [
   {
@@ -51,13 +53,7 @@ const data = [
     progress: 40,
     color: "green",
     Icon: DiNodejs,
-  },{
-    label: "Express",
-    stats: "30%",
-    progress: 30,
-    color: "black",
-    Icon: SiExpress,
-  },
+  }
 ];
 
 export const useStyles = createStyles((theme) => ({
@@ -67,32 +63,137 @@ export const useStyles = createStyles((theme) => ({
   skills: {
     borderRadius: "1rem",
   },
+  transition: {
+    transition: "200ms ease",
+    background: "cyan.2"
+  }, 
+  activeTab: {
+    color: 'white',
+  },
 }));
 
 export function Skills() {
-  const { classes } = useStyles();
-  return (
-    <Flex
-      w={"100%"}
-      direction={"column"}
-      align={"center"}
-      bg={"white"}
-      p={20}
-      className={classes.skills}
-    >
-      <Title color={"pink.9"} order={2} className={classes.grand} mb={2}>
-        Technical skills:
-      </Title>
-      <Grid w={"100%"} my={20}>
-        <StatsRings data={data}></StatsRings>
-      </Grid>
+    const { classes } = useStyles();
+    const [activeTab, setActiveTab] = useState<string | null>("gallery");
+  
+    return (
+      <Flex
+        w={"100%"}
+        direction={"column"}
+        align={"center"}
+        bg={"white"}
+        p={20}
+        className={classes.skills}
+      >
+        <Tabs
+          color="cyan"
+          variant="pills"
+          defaultValue="gallery"
+          onTabChange={setActiveTab}
+          w={"100%"}
+        >
+          <Tabs.List grow position="center">
+            <Tabs.Tab
+              value="gallery"
+              className={activeTab === "gallery" ? classes.activeTab : ""}
+            >
+              <Title order={3} className={classes.grand} mb={2}>
+                Technical skills
+              </Title>
+            </Tabs.Tab>
+            <Tabs.Tab
+              value="messages"
+              className={activeTab === "messages" ? classes.activeTab : ""}
+            >
+              <Title order={3} className={classes.grand} mb={2}>
+                Education
+              </Title>
+            </Tabs.Tab>
+            <Tabs.Tab
+              value="settings"
+              className={activeTab === "settings" ? classes.activeTab : ""}
+            >
+              <Title order={3} className={classes.grand} mb={2}>
+                Education
+              </Title>
+            </Tabs.Tab>
+          </Tabs.List>
 
-      <Grid gutter="lg">
-        <Col>
-          <TechQuote />
-          <TechKnowledge />
-        </Col>
-      </Grid>
-    </Flex>
-  );
-}
+          <Tabs.Panel value="gallery" pt="xs">
+            <Grid w={"100%"} my={20}>
+              <StatsRings data={data}></StatsRings>
+            </Grid>
+
+            <Grid gutter="lg">
+              <Col>
+                <TechQuote />
+                <TechKnowledge />
+              </Col>
+            </Grid>
+          </Tabs.Panel>
+
+          <Tabs.Panel value="messages" pt="xs">
+            <Grid gutter="lg" p={30}>
+              <Col>
+                <Box maw={"100%"} mx="auto">
+                  <Timeline color="pink" active={3} reverseActive bulletSize={35} lineWidth={5}>
+                    <Timeline.Item title="Default bullet" >
+                      <Text color="dimmed" size="sm">
+                        Default bullet without anything
+                      </Text>
+                    </Timeline.Item>
+                    <Timeline.Item
+                      title="Avatar"
+                      bulletSize={35}
+                      bullet={
+                        <Avatar
+                          size={22}
+                          radius="xl"
+                          src="https://avatars0.githubusercontent.com/u/10353856?s=460&u=88394dfd67727327c1f7670a1764dc38a8a24831&v=4"
+                        />
+                      }
+                    >
+                      <Text color="dimmed" size="sm">
+                        Timeline bullet as avatar image
+                      </Text>
+                    </Timeline.Item>
+                    <Timeline.Item
+                      title="Icon"
+                      bulletSize={35}
+                      bullet={<IconSun size="0.8rem" />}
+                    >
+                      <Text color="dimmed" size="sm">
+                        Timeline bullet as icon
+                      </Text>
+                    </Timeline.Item>
+                    <Timeline.Item
+                      title="ThemeIcon"
+                      bulletSize={24}
+                      bullet={
+                        <ThemeIcon
+                          size={35}
+                          variant="gradient"
+                          gradient={{ from: "lime", to: "cyan" }}
+                          radius="xl"
+                        >
+                          <IconVideo size="0.8rem" />
+                        </ThemeIcon>
+                      }
+                    >
+                      <Text color="dimmed" size="sm">
+                        Timeline bullet as ThemeIcon component
+                      </Text>
+                    </Timeline.Item>
+                  </Timeline>
+                </Box>
+              </Col>
+            </Grid>
+          </Tabs.Panel>
+
+          <Tabs.Panel value="settings" pt="xs">
+            Settings tab content
+          </Tabs.Panel>
+        </Tabs>
+      </Flex>
+    );
+  }
