@@ -60,7 +60,7 @@ export const portfolio: carouselProps[] = [
         "assets/isac2.jpg",
       ],
       title: "Stolen Heart",
-      text: "The start of a visual novel game, where I have made the art, code and writing. Made with Typescript and OOP. blajklnds ndkasn ldklasn dlkasnldkn aslkdklnas daslkdlkad lasdldlkdlkas",
+      text: "The start of a visual novel game, where I have made the art, code and writing. Made with Typescript and OOP.In the future, you will get to befriend defferent characters and learn about a school mystery.",
       githubLink: "https://github.com/MimPMC/Stolen-Hearts",
       demoLink: "https://game3demo.netlify.app/",
   
@@ -89,8 +89,20 @@ export const portfolio: carouselProps[] = [
       text: "The first chapter of a visual novel game, where I have made the art, code and writing.Its made with renpy and python. It's about an aspiring esport player who gets to join a pro team as a substitute. ",
       githubLink: "https://github.com/MimPMC/",
       demoLink: "https://mimpmc.itch.io/pro-esport-dating-adventure-chapter-1-beta",
-      
-  
+
+    }, {
+      images: [
+        "assets/cat11.png",
+        "assets/cat33.png",
+        "assets/cat22.png"
+          
+      ],
+      title: "Cat chat",
+      text: "Cat chat is a chat application made with React, Typescript and Socket-io. Multiple cats can create and join chatrooms and mjao to eachother about the hottest news! It will also be available to mobile in the future! ",
+      githubLink: "https://github.com/MimPMC/",
+      demoLink: "/portfolio",
+      demoText: "Coming soon!"
+
     }
     
     
