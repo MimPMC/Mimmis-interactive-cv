@@ -30,7 +30,7 @@ interface FeatureProps {
 export function Feature({ image, title, description }: FeatureProps) {
   return (
     <div>
-      <Image h={150} src={image}></Image>
+      
       <Text mt="sm" mb={7}>
         {title}
       </Text>
