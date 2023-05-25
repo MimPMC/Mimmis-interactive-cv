@@ -1,11 +1,11 @@
 import {
-  Flex,
-  Group,
-  Image,
-  Stack,
-  Text,
-  Title,
-  createStyles,
+    Flex,
+    Group,
+    Image,
+    Stack,
+    Text,
+    Title,
+    createStyles,
 } from "@mantine/core";
 import { IconMail, IconMapPin, IconPhone } from "@tabler/icons-react";
 
@@ -62,7 +62,7 @@ export function ContactImage() {
     >
       <Image
         radius="md"
-        src="./src/assets/picture.png"
+        src="assets/picture.png"
         alt="cat"
         className={classes.inner}
       />

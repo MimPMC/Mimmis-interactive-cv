@@ -9,7 +9,7 @@ const useStyles = createStyles((theme) => ({
     height: "100vh",
     backgroundImage:
     
-      'linear-gradient(250deg, rgba(130, 201, 30, 0) 30%, #d1265f 85%), url("./src/assets/pinkmountains2.png")',
+      'linear-gradient(250deg, rgba(130, 201, 30, 0) 30%, #d1265f 85%), url("assets/pinkmountains2.png")',
       paddingTop: `50vh`,
       paddingBottom: `30vh`,
     [theme.fn.smallerThan('sm')]: {

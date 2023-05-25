@@ -2,19 +2,19 @@ import { Container, Image, SimpleGrid, Text, createStyles, rem } from '@mantine/
 
 export const MOCKDATA = [
   {
-    image:  "./src/assets/1.png",
+    image:  "assets/1.png",
     title: 'Frontend Developer  2022-2024',
     description:
     "I have learned about HTML & CSS, Ux and Usability, JavaScript basics, JavaScript advanced, and Dynamic Web Development and creating backend servers and API's.",
   },
   {
-    image:  "./src/assets/3.png",
+    image:  "assets/3.png",
     title: 'Dataspelsutveckling 2D Grafik 2015-2018',
     description:
       "Bachelor's degree in Media, Aesthetics, and Storytelling. I learned how to create and implement 2D graphics and worked on several larger projects with other game development students"
   },
   {
-    image:  "./src/assets/4.png",
+    image:  "assets/4.png",
     title: 'Karlstads Universitet Serieteckning 2014',
     description:
       'Arts and comics class where I got to create multiple art projects with fun and interesed people.',

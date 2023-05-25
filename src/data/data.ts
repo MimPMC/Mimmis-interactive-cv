@@ -3,10 +3,10 @@ import { carouselProps } from "../pages/PortfolioPage";
 export const portfolio: carouselProps[] = [
     {
       images: [
-        "./src/assets/carousel/boba1.png",
-        "./src/assets/carousel/boba2.png",
-        "./src/assets/carousel/boba3.png",
-        "./src/assets/carousel/boba4.png",
+        "assets/carousel/boba1.png",
+        "assets/carousel/boba2.png",
+        "assets/carousel/boba3.png",
+        "assets/carousel/boba4.png",
       ],
       title: "Boba Bliss",
       text: "Boba Bliss is a front end web shop. Order your favorite boba and get to a fake confirmation"+ 
@@ -16,10 +16,10 @@ export const portfolio: carouselProps[] = [
     },
     {
       images: [
-        "./src/assets/carousel/dressup1.jpg",
-        "./src/assets/carousel/dressup2.jpg",
-        "./src/assets/carousel/dressup3.jpg",
-        "./src/assets/carousel/dressup4.jpg",
+        "assets/carousel/dressup1.jpg",
+        "assets/carousel/dressup2.jpg",
+        "assets/carousel/dressup3.jpg",
+        "assets/carousel/dressup4.jpg",
       ],
       title: "Dress up!",
       text: "A Dress up game I made in vanilla javascript where you get to create your own character and choose between many different looks. I made all the graphics and it's also responsive!",
@@ -29,10 +29,10 @@ export const portfolio: carouselProps[] = [
     },
     {
       images: [
-        "./src/assets/carousel/vego1.jpg",
-        "./src/assets/carousel/vego2.jpg",
-        "./src/assets/carousel/vego3.jpg",
-        "./src/assets/carousel/vego4.png",
+        "assets/carousel/vego1.jpg",
+        "assets/carousel/vego2.jpg",
+        "assets/carousel/vego3.jpg",
+        "assets/carousel/vego4.png",
       ],
       title: "Vegokassen",
       text: "Vegokassen - a vegetarian meal kit service. Add products to cart, read reviews or check out how ordering works. Note that the website is in swedish.",
@@ -42,9 +42,9 @@ export const portfolio: carouselProps[] = [
     },
     {
       images: [
-        "./src/assets/carousel/cat3.png",
-        "./src/assets/carousel/cat1.png",
-        "./src/assets/carousel/cat2.png",
+        "assets/carousel/cat3.png",
+        "assets/carousel/cat1.png",
+        "assets/carousel/cat2.png",
       ],
       title: "Save Göteborg!",
       text: "A 2D running and shooting game made in Typescript, p.5 and written with Object-oriented programming. I did lots of coding and made all the graphics in this game! ",
@@ -54,10 +54,10 @@ export const portfolio: carouselProps[] = [
     },
     {
       images: [
-        "./src/assets/mainmenu.jpg",
-        "./src/assets/hey.jpg",
-        "./src/assets/pick.png",
-        "./src/assets/isac2.jpg",
+        "assets/mainmenu.jpg",
+        "assets/hey.jpg",
+        "assets/pick.png",
+        "assets/isac2.jpg",
       ],
       title: "Stolen Heart",
       text: "The start of a visual novel game, where I have made the art, code and writing. Made with Typescript and OOP. blajklnds ndkasn ldklasn dlkasnldkn aslkdklnas daslkdlkad lasdldlkdlkas",
@@ -67,8 +67,8 @@ export const portfolio: carouselProps[] = [
     },
     {
       images: [
-        "./src/assets/carousel/scratchpadp.png",
-        "./src/assets/carousel/scratchpad_2.png",
+        "assets/carousel/scratchpadp.png",
+        "assets/carousel/scratchpad_2.png",
       ],
       title: "Scratchpad",
       text: "A social media app for cats where you can register an account, log in, post, edit and delete posts. The accounts and posts are saved in a Mongodb database. Its coming to the demo soon!",
@@ -79,10 +79,10 @@ export const portfolio: carouselProps[] = [
     },
     {
       images: [
-        "./src/assets/carousel/gl1.png",
-        "./src/assets/carousel/gl3.jpg",
-        "./src/assets/carousel/gl4.jpg",
-        "./src/assets/carousel/gl2.jpg",
+        "assets/carousel/gl1.png",
+        "assets/carousel/gl3.jpg",
+        "assets/carousel/gl4.jpg",
+        "assets/carousel/gl2.jpg",
           
       ],
       title: "Good luck in Esports",

@@ -1,4 +1,4 @@
-import { Container, Overlay, Text, Title, createStyles, rem } from '@mantine/core';
+import { Container, Text, Title, createStyles, rem } from '@mantine/core';
 
 
 const useStyles = createStyles((theme) => ({
@@ -7,7 +7,7 @@ const useStyles = createStyles((theme) => ({
     paddingTop: rem(35),
     paddingBottom: rem(35),
     //backgroundImage:
-    //  'url(./src/assets/bedroom_pink.png)',
+    //  'url(assets/bedroom_pink.png)',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     marginTop:"3.5rem",

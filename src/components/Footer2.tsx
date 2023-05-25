@@ -198,7 +198,7 @@ export function Footer2({ data }: FooterLinksProps) {
         </div>
         <div className={classes.groups}>
           {groups}
-        <Image className={classes.image} maw={250} radius="md" src="./src/assets/laptopcat.png" alt="Random image" />
+        <Image className={classes.image} maw={250} radius="md" src="assets/laptopcat.png" alt="Random image" />
         </div>
         
       </Container>
