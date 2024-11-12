@@ -9,28 +9,35 @@ import {
     createStyles,
     rem,
 } from '@mantine/core';
-import { IconNews, IconMailbox, IconToolsKitchen} from '@tabler/icons-react';
+import { IconNews, IconMailbox, IconToolsKitchen, IconCloudComputing, IconDeviceDesktop} from '@tabler/icons-react';
   
   const mockdata = [
     {
-      company: 'Postnord',
-      title: 'Postman || 2019-2022',
+      company: "Majako",
+      title: "Frontend - developer intern || 2023-2024",
       description:
-        'As a mail and parcel handler, I sorted, packed, and distributed mail and parcels to customers by foot and car, while also helping new co-workers learn their routes.',
+        "As a former Frontend developer at  Majako, Got to contribute on multiple different projects and websites, working mostly in React and Next.js.",
+      icon: IconDeviceDesktop,
+    },
+    {
+      company: "Postnord",
+      title: "Postman || 2020-2024",
+      description:
+        "As a mail and parcel handler, I sorted, packed, and distributed mail and parcels to customers by foot and car, while also helping new co-workers learn their routes.",
       icon: IconMailbox,
     },
     {
-      company: 'NWT Direct',
-      title: 'Newspaper distributor || 2018-2019',
+      company: "NWT Direct",
+      title: "Newspaper distributor || 2018-2019",
       description:
-        'As a newspaper distributor, my job involved sorting and distributing newspapers during nighttime hours. Learning to work independently.',
+        "As a newspaper distributor, my job involved sorting and distributing newspapers during nighttime hours. Learning to work independently.",
       icon: IconNews,
     },
     {
-      company: 'Rasta',
-      title: 'Restaurant Assistant || 2014-2015',
+      company: "Rasta",
+      title: "Restaurant Assistant || 2014-2015",
       description:
-        'As a former restaurant worker, I played a vital role in ensuring smooth operations by taking customer orders, preparing delicious meals, and providing customer service.',
+        "As a former restaurant worker, I played a vital role in ensuring smooth operations by taking customer orders, preparing delicious meals, and providing customer service.",
       icon: IconToolsKitchen,
     },
   ];

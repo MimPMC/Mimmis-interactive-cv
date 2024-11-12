@@ -82,14 +82,14 @@ export function ContactImage() {
           <Title className={classes.title}>Hello! I'm Mimmi Collin</Title>
           <Text my={10} className={classes.grand1}>
             {" "}
-            Frontend developer student
+            Frontend developer
           </Text>
           <Text my={10}>
             {" "}
-            I am a creative front-end developer student with a background in 2D graphics and art. 
-            I am is eager to find my first internship where I can learn and grow while working on
+            I am a creative front-end developer with a background in 2D graphics and art. 
+            I am is eager to find my first full time job where I can learn and grow while working on
              exciting projects. I have a passion for coding, designing websites and graphics. Besides
-              my interests in technology, I also enjoy painting and cooking!
+              my interests in technology, I also enjoy painting, knitting and playing the clarinet!
           </Text>
         </Flex>
         <Flex
@@ -106,7 +106,7 @@ export function ContactImage() {
             <Group>
               <IconMail size="1.7rem" stroke={1.8} />
               <Text className={classes.grand1}>
-                mimmi.collin@medieinstitutet.se
+                mimmi.magnusson.collin@gmail.com.se
               </Text>
             </Group>
             <Group>
@@ -115,7 +115,7 @@ export function ContactImage() {
             </Group>
             <Group>
               <IconMapPin size="1.7rem" stroke={1.8} />
-              <Text className={classes.grand1}>Munkedal</Text>
+              <Text className={classes.grand1}>Munkedal/Gothenburg</Text>
             </Group>
           </Stack>
         </Flex>
