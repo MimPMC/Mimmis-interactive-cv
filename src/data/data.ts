@@ -14,6 +14,17 @@ export const portfolio: carouselProps[] = [
   },
   {
     images: [
+      "assets/carousel/cake1.png",
+      "assets/carousel/cake2.png",
+      "assets/carousel/cake3.png",
+    ],
+    title: "Love story cakes",
+    text: "Love story cakes is a front end web shop. customize your dream wedding cake and see a live preview in 3d. A  fully customized website with extraorinary design and animations.",
+    githubLink: "https://github.com/MimPMC/LoveStoryCakes",
+    demoLink: "https://lovestorycakes.netlify.app/",
+  },
+  {
+    images: [
       "assets/carousel/boba1.png",
       "assets/carousel/boba2.png",
       "assets/carousel/boba3.png",

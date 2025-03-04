@@ -15,8 +15,7 @@ function App() {
       links: [
         { label: "Mimmi Collin", link: "/link1" },
         { label: "0730506955", link: "/link2" },
-        { label: "mimmi.collin@medieinstitutet.se", link: "/link3" },
-
+        { label: "magnussoncollinmimmi@gmail.com", link: "/link3" },
       ],
     },
   ];
