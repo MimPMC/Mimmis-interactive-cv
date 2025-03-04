@@ -1,11 +1,11 @@
 import {
-    Flex,
-    Group,
-    Image,
-    Stack,
-    Text,
-    Title,
-    createStyles,
+  Flex,
+  Group,
+  Image,
+  Stack,
+  Text,
+  Title,
+  createStyles,
 } from "@mantine/core";
 import { IconMail, IconMapPin, IconPhone } from "@tabler/icons-react";
 
@@ -66,17 +66,11 @@ export function ContactImage() {
         alt="cat"
         className={classes.inner}
       />
-      <Flex
-        w={"50%"}
-
-        className={classes.inner}
-        direction={"column"}
-      >
+      <Flex w={"50%"} className={classes.inner} direction={"column"}>
         <Flex
           h={"50%"}
           w={"100%"}
           direction={"column"}
-
           className={classes.infoBox}
         >
           <Title className={classes.title}>Hello! I'm Mimmi Collin</Title>
@@ -86,10 +80,12 @@ export function ContactImage() {
           </Text>
           <Text my={10}>
             {" "}
-            I am a creative front-end developer with a background in 2D graphics and art. 
-            I am is eager to find my first full time job where I can learn and grow while working on
-             exciting projects. I have a passion for coding, designing websites and graphics. Besides
-              my interests in technology, I also enjoy painting, knitting and playing the clarinet!
+            I am a creative front-end developer with a background in 2D graphics
+            and art. I am is eager to find my first full time job where I can
+            learn and grow while working on exciting projects. I have a passion
+            for coding, designing websites and graphics. Besides my interests in
+            technology, I also enjoy painting, knitting and playing the
+            clarinet!
           </Text>
         </Flex>
         <Flex
@@ -106,7 +102,7 @@ export function ContactImage() {
             <Group>
               <IconMail size="1.7rem" stroke={1.8} />
               <Text className={classes.grand1}>
-                mimmi.magnusson.collin@gmail.com.se
+                magnussoncollinmimmi@gmail.com
               </Text>
             </Group>
             <Group>

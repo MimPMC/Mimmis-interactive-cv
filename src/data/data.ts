@@ -3,14 +3,16 @@ import { carouselProps } from "../pages/PortfolioPage";
 export const portfolio: carouselProps[] = [
   {
     images: [
-      "assets/carousel/cake1.png",
-      "assets/carousel/cake2.png",
-      "assets/carousel/cake3.png",
+      "assets/carousel/pb1.png",
+      "assets/carousel/pb2.png",
+      "assets/carousel/pb3.png",
+      "assets/carousel/pb4.png",
     ],
-    title: "Love story cakes",
-    text: "Love story cakes is a front end web shop. customize your dream wedding cake and see a live preview in 3d. A  fully customized website with extraorinary design and animations.",
-    githubLink: "https://github.com/MimPMC/LoveStoryCakes",
-    demoLink: "https://lovestorycakes.netlify.app/",
+    title: "PowerGirl",
+    text: "PowerGirl is a first version on an online web multiplayer game for dressing up, chatting and strategic gameplay. It's build with React, Typescript and Socket-io.",
+    githubLink: "https://github.com/Little-Sisters/powerbabe",
+    demoLink: "/portfolio",
+    demoText: "Coming soon!",
   },
   {
     images: [
