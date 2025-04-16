@@ -60,6 +60,7 @@ export const portfolio: carouselProps[] = [
     title: "World football player",
     text: "World football player is a PWA build in Nextjs, Typescript, Node and MUI. I helped develop the apps ui and functions for chatting and searching. The app helps football players find their team. ",
     demoLink: "https://www.worldfootballplayer.com/",
+    demoText: "Website",
   },
   {
     images: [
