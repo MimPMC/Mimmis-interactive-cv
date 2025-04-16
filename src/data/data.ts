@@ -46,7 +46,7 @@ export const portfolio: carouselProps[] = [
       "assets/carousel/pb4.png",
     ],
     title: "PowerGirl",
-    text: "PowerGirl is a first version on an online web multiplayer game for dressing up, chatting and strategic gameplay. It's build with React, Typescript and Socket-io.",
+    text: "PowerGirl is a first version on an online web multiplayer game inspired by early 2000's games. It's for dressing up, chatting and strategic gameplay. It's build with React, Typescript and Socket-io.",
     githubLink: "https://github.com/Little-Sisters/powerbabe",
     demoLink: "/portfolio",
     demoText: "Coming soon!",
