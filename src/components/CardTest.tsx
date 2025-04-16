@@ -51,53 +51,49 @@ const useStyles = createStyles((theme) => ({
   },
   carouselImg: {
     height: "20rem",
-    background: "red"
-
+    background: "red",
   },
   buttons: {
     fontFamily: "'Grandstander', cursive",
-    
+
     [theme.fn.smallerThan("md")]: {
       padding: "0 13px",
     },
     [theme.fn.smallerThan("sm")]: {
-      padding: "0 8px"
+      padding: "0 8px",
     },
-  }
+  },
 }));
 
+export function CarouselCard(props: carouselProps) {
+  const { classes } = useStyles();
+  const desktopHeight = 340;
+  const ipadHeight = 270;
+  const mobileHeight = 370;
+  const smolHeight = 250;
 
+  const isDesktop = useMediaQuery("(min-width: 992px)");
+  const isIpad = useMediaQuery("(min-width: 768px) and (max-width: 991px)");
+  const isMobile = useMediaQuery("(min-width: 568px) and (max-width: 767px)");
+  const isSmol = useMediaQuery("(max-width: 567px)");
 
-export function CarouselCard(props: carouselProps
-   ) {
-    const {classes }= useStyles()
-    const desktopHeight = 340;
-    const ipadHeight = 270;
-    const mobileHeight = 370;
-    const smolHeight = 250;
-    
-    const isDesktop = useMediaQuery('(min-width: 992px)');
-    const isIpad = useMediaQuery('(min-width: 768px) and (max-width: 991px)');
-    const isMobile = useMediaQuery('(min-width: 568px) and (max-width: 767px)');
-    const isSmol = useMediaQuery('(max-width: 567px)');
-    
-    let height: number;
-    if (isDesktop) {
-      height = desktopHeight;
-    } else if (isIpad) {
-      height = ipadHeight;
-    } else if (isMobile) {
-      height = mobileHeight;
-    } else if (isSmol) {
-      height = smolHeight;
-      console.log('isSmol matched!')
-    }
-    
-    const slides = props.images.map((image, index) => (
-      <Carousel.Slide key={index}>
-        <Image src={image} alt={image} height={height} />
-      </Carousel.Slide>
-    ));
+  let height: number;
+  if (isDesktop) {
+    height = desktopHeight;
+  } else if (isIpad) {
+    height = ipadHeight;
+  } else if (isMobile) {
+    height = mobileHeight;
+  } else if (isSmol) {
+    height = smolHeight;
+    console.log("isSmol matched!");
+  }
+
+  const slides = props.images.map((image, index) => (
+    <Carousel.Slide key={index}>
+      <Image src={image} alt={image} height={height} />
+    </Carousel.Slide>
+  ));
   return (
     <Card radius="md" withBorder padding="lg" w={"100%"}>
       <Card.Section>
@@ -124,20 +120,22 @@ export function CarouselCard(props: carouselProps
         {props.text}
       </Text>
 
-      <Group position="apart" mt="md" >
-        <Link to={props.githubLink}>
-          <Button
-            color="cyan"
-            radius="md"
-            variant="outline"
-            className={classes.buttons}
-          >
-            <Text pr={5} className={classes.grand2}>
-              View on Github
-            </Text>
-            <IconBrandGithub></IconBrandGithub>
-          </Button>
-        </Link>
+      <Group position="apart" mt="md">
+        {props.githubLink && (
+          <Link to={props.githubLink}>
+            <Button
+              color="cyan"
+              radius="md"
+              variant="outline"
+              className={classes.buttons}
+            >
+              <Text pr={5} className={classes.grand2}>
+                View on Github
+              </Text>
+              <IconBrandGithub />
+            </Button>
+          </Link>
+        )}
         <Link to={props.demoLink}>
           <Button
             color="pink"
@@ -146,9 +144,9 @@ export function CarouselCard(props: carouselProps
             className={classes.buttons}
           >
             <Text pr={5} className={classes.grand2}>
-            {props.demoText ? props.demoText : "Go to Demo"}
+              {props.demoText ? props.demoText : "Go to Demo"}
             </Text>
-            <IconDeviceGamepad2></IconDeviceGamepad2>
+            <IconDeviceGamepad2 />
           </Button>
         </Link>
       </Group>

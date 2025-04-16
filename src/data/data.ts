@@ -3,6 +3,43 @@ import { carouselProps } from "../pages/PortfolioPage";
 export const portfolio: carouselProps[] = [
   {
     images: [
+      "assets/carousel/pivo1.png",
+      "assets/carousel/pivo2.png",
+      "assets/carousel/pivo3.png",
+    ],
+    title: "Pivoteam",
+    text: "Pivoteam is an app for football coaches where they can plan and customize trainings, while learning about exercises. It is build in React-native, Typescript, C# and tailwind.",
+    demoLink: "https://test-www.pivoteam.app/sv",
+    demoText: "Pivoteams website",
+  },
+  {
+    images: [
+      "assets/carousel/cake1.png",
+      "assets/carousel/cake2.png",
+      "assets/carousel/cake3.png",
+    ],
+    title: "Love story cakes",
+    text: "Love story cakes is a cake web shop. customize your dream wedding cake and see a live preview in 3d. A  fully customized website with extraorinary design and animations.",
+    githubLink: "https://github.com/MimPMC/LoveStoryCakes",
+    demoLink: "https://lovestorycakes.netlify.app/",
+  },
+  {
+    images: [
+      "assets/carousel/boba1.png",
+      "assets/carousel/boba2.png",
+      "assets/carousel/boba3.png",
+      "assets/carousel/boba4.png",
+    ],
+    title: "Boba Bliss",
+    text:
+      "Boba Bliss is a fullstack project web shop. Order your favorite boba and get to a fake confirmation" +
+      "page with a unique id or manage the products through the admin page with CRUD",
+    githubLink:
+      "https://github.com/backend-slutprojekt-boba-bliss/Backend-Boba-Bliss-Project",
+    demoLink: "https://bobabliss.netlify.app/",
+  },
+  {
+    images: [
       "assets/carousel/pb1.png",
       "assets/carousel/pb2.png",
       "assets/carousel/pb3.png",
@@ -16,28 +53,13 @@ export const portfolio: carouselProps[] = [
   },
   {
     images: [
-      "assets/carousel/cake1.png",
-      "assets/carousel/cake2.png",
-      "assets/carousel/cake3.png",
+      "assets/carousel/foot1.png",
+      "assets/carousel/foot2.png",
+      "assets/carousel/foot3.png",
     ],
-    title: "Love story cakes",
-    text: "Love story cakes is a front end web shop. customize your dream wedding cake and see a live preview in 3d. A  fully customized website with extraorinary design and animations.",
-    githubLink: "https://github.com/MimPMC/LoveStoryCakes",
-    demoLink: "https://lovestorycakes.netlify.app/",
-  },
-  {
-    images: [
-      "assets/carousel/boba1.png",
-      "assets/carousel/boba2.png",
-      "assets/carousel/boba3.png",
-      "assets/carousel/boba4.png",
-    ],
-    title: "Boba Bliss",
-    text:
-      "Boba Bliss is a front end web shop. Order your favorite boba and get to a fake confirmation" +
-      "page with a unique id or manage the products through the admin page with CRUD",
-    githubLink: "https://github.com/caisak/Boba-Bliss",
-    demoLink: "https://bobabliss.netlify.app/",
+    title: "World football player",
+    text: "World football player is a PWA build in Nextjs, Typescript, Node and MUI. I helped develop the apps ui and functions for chatting and searching. The app helps football players find their team. ",
+    demoLink: "https://www.worldfootballplayer.com/",
   },
   {
     images: [

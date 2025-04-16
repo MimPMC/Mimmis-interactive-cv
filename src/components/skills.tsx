@@ -12,8 +12,6 @@ import { StatsRings } from "./stats";
 import { TechKnowledge, TechQuote } from "./test1";
 import { FeaturesCards } from "./work";
 
-
-
 const data = [
   {
     label: "html",
@@ -42,20 +40,21 @@ const data = [
     progress: 55,
     color: "blue",
     Icon: IconBrandJavascript,
-  }, 
+  },
   {
     label: "react",
-    stats: "60%",
-    progress: 55,
+    stats: "80%",
+    progress: 80,
     color: "darkblue",
     Icon: IconBrandReact,
-  }, {
+  },
+  {
     label: "Node.js",
-    stats: "40%",
-    progress: 40,
+    stats: "50%",
+    progress: 50,
     color: "green",
     Icon: DiNodejs,
-  }
+  },
 ];
 
 export const useStyles = createStyles((theme) => ({
@@ -67,82 +66,80 @@ export const useStyles = createStyles((theme) => ({
   },
   transition: {
     transition: "200ms ease",
-    background: "cyan.2"
-  }, 
+    background: "cyan.2",
+  },
   activeTab: {
-    color: 'white',
+    color: "white",
   },
 }));
 
 export function Skills() {
-    const { classes } = useStyles();
-    const [activeTab, setActiveTab] = useState<string | null>("gallery");
-  
-    return (
-      <Flex
+  const { classes } = useStyles();
+  const [activeTab, setActiveTab] = useState<string | null>("gallery");
+
+  return (
+    <Flex
+      w={"100%"}
+      direction={"column"}
+      align={"center"}
+      bg={"white"}
+      p={20}
+      className={classes.skills}
+    >
+      <Tabs
+        color="cyan"
+        variant="pills"
+        defaultValue="gallery"
+        onTabChange={setActiveTab}
         w={"100%"}
-        direction={"column"}
-        align={"center"}
-        bg={"white"}
-        p={20}
-        className={classes.skills}
       >
-        <Tabs
-          color="cyan"
-          variant="pills"
-          defaultValue="gallery"
-          onTabChange={setActiveTab}
-          w={"100%"}
-        >
-          <Tabs.List grow position="center">
-            <Tabs.Tab
-              value="gallery"
-              className={activeTab === "gallery" ? classes.activeTab : ""}
-            >
-              <Title order={3} className={classes.grand} mb={2}>
-                Technical skills
-              </Title>
-            </Tabs.Tab>
-            <Tabs.Tab
-              value="messages"
-              className={activeTab === "messages" ? classes.activeTab : ""}
-            >
-              <Title order={3} className={classes.grand} mb={2}>
-                Education
-              </Title>
-            </Tabs.Tab>
-            <Tabs.Tab
-              value="settings"
-              className={activeTab === "settings" ? classes.activeTab : ""}
-            >
-              <Title order={3} className={classes.grand} mb={2}>
-                Experience
-              </Title>
-            </Tabs.Tab>
-          </Tabs.List>
+        <Tabs.List grow position="center">
+          <Tabs.Tab
+            value="gallery"
+            className={activeTab === "gallery" ? classes.activeTab : ""}
+          >
+            <Title order={3} className={classes.grand} mb={2}>
+              Technical skills
+            </Title>
+          </Tabs.Tab>
+          <Tabs.Tab
+            value="messages"
+            className={activeTab === "messages" ? classes.activeTab : ""}
+          >
+            <Title order={3} className={classes.grand} mb={2}>
+              Education
+            </Title>
+          </Tabs.Tab>
+          <Tabs.Tab
+            value="settings"
+            className={activeTab === "settings" ? classes.activeTab : ""}
+          >
+            <Title order={3} className={classes.grand} mb={2}>
+              Experience
+            </Title>
+          </Tabs.Tab>
+        </Tabs.List>
 
-          <Tabs.Panel value="gallery" pt="xs">
-            <Grid w={"100%"} my={20}>
-              <StatsRings data={data}></StatsRings>
-            </Grid>
+        <Tabs.Panel value="gallery" pt="xs">
+          <Grid w={"100%"} my={20}>
+            <StatsRings data={data}></StatsRings>
+          </Grid>
 
-            <Grid gutter="lg">
-              <Col>
-                <TechQuote />
-                <TechKnowledge />
-              </Col>
-            </Grid>
-          </Tabs.Panel>
-         
-          <Tabs.Panel value="messages" pt="xs">
-          <FeaturesGrid title={"hello"} description={"hello"} ></FeaturesGrid>
-          
-          </Tabs.Panel>
-          <Tabs.Panel value="settings" pt="xs">
-   
+          <Grid gutter="lg">
+            <Col>
+              <TechQuote />
+              <TechKnowledge />
+            </Col>
+          </Grid>
+        </Tabs.Panel>
+
+        <Tabs.Panel value="messages" pt="xs">
+          <FeaturesGrid title={"hello"} description={"hello"}></FeaturesGrid>
+        </Tabs.Panel>
+        <Tabs.Panel value="settings" pt="xs">
           <FeaturesCards></FeaturesCards>
-          </Tabs.Panel>
-        </Tabs>
-      </Flex>
-    );
-  }
+        </Tabs.Panel>
+      </Tabs>
+    </Flex>
+  );
+}
